@@ -5,11 +5,16 @@ This repository holds the code used in our **WWW-19** paper: [Learning Travel Ti
 
 ## Requirements
 
+* Ubuntu OS (16.04 and 18.04 are tested)
 * [Julia](https://julialang.org/downloads/) >= 1.0
 * Python >= 3.6
 * PyTorch >= 0.4
 
-Please refer to the source code to install the required packages in both Julia and Python.
+Please refer to the source code to install the required packages in both Julia and Python. You can install packages for Julia in shell as
+
+```bash
+julia -e 'using Pkg; Pkg.add("HDF5"); Pkg.add("CSV"); Pkg.add("DataFrames"); Pkg.add("Distances"); Pkg.add("StatsBase"); Pkg.add("JSON"); Pkg.add("Lazy"); Pkg.add("JLD2"); Pkg.add("ArgParse")'
+```
 
 ## Dataset
 
@@ -17,7 +22,7 @@ The dataset contains 1 million+ trips collected by 1,3000+ taxi cabs during 5 da
 
 Download the dataset and put the extracted `*.h5` files into `deepgtt/data/h5path`.
 
-Each h5 file contains `n` trips of the day. For each trip, it has three fields `lon` (longitude), `lat` (latitude), `tms` (timestamp). You can read the h5 file using the `readtripsh5` function in Julia,
+Each h5 file contains `n` trips of the day. For each trip, it has three fields `lon` (longitude), `lat` (latitude), `tms` (timestamp). You can read the h5 file using the [`readtripsh5`](https://github.com/boathit/deepgtt/blob/master/harbin/julia/Trip.jl#L28) function in Julia,
 
 ```julia
 function readtripsh5(tripfile::String)
@@ -48,6 +53,8 @@ First, setting up the map server and matching server by referring to [barefoot](
 Then, matching the trips
 
 ```bash
+git clone https://github.com/boathit/deepgtt
+
 cd deepgtt/harbin/julia
 
 julia -p 6 mapmatch.jl --inputpath ../data/h5path --outputpath ../data/jldpath
