@@ -71,6 +71,7 @@ python estimate.py -testpath ../data/testpath
 
 ## Reference
 
+```
 @inproceedings{www19xc,
   author    = {Xiucheng Li and
                Gao Cong and
@@ -81,3 +82,4 @@ python estimate.py -testpath ../data/testpath
                {WWW} 2019, San Francisco, California, May 13-17, 2019},
   year      = {2019},
 }
+```
