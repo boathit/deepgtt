@@ -28,7 +28,7 @@ cd deepgtt && mkdir -p data/h5path data/jldpath data/trainpath data/validpath da
 
 Download the dataset (**to be coming**) and put the extracted `*.h5` files into `deepgtt/data/h5path`.
 
-## Data format
+### Data format
 
 Each h5 file contains `n` trips of the day. For each trip, it has three fields `lon` (longitude), `lat` (latitude), `tms` (timestamp). You can read the h5 file using the [`readtripsh5`](https://github.com/boathit/deepgtt/blob/master/harbin/julia/Trip.jl#L28) function in Julia. If you want to use your own data, you can also refer to [`readtripsh5`](https://github.com/boathit/deepgtt/blob/master/harbin/julia/Trip.jl#L28) to dump your trajectories into the required hdf5 files.
 
