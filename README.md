@@ -1,14 +1,14 @@
 
 # DeepGTT
 
-This repository holds the code used in our **WWW-19** paper: [Learning Travel Time Distributions with Deep Generative Model]().
+This repository holds the code used in our **WWW-19** paper: [Learning Travel Time Distributions with Deep Generative Model](https://drive.google.com/open?id=1oGYBeIlP_n5MtgyW9D8ExSoOiCRhgZoq).
 
 ## Requirements
 
 * Ubuntu OS (16.04 and 18.04 are tested)
 * [Julia](https://julialang.org/downloads/) >= 1.0
 * Python >= 3.6
-* PyTorch >= 0.4
+* PyTorch >= 0.4 (both 0.4 and 1.0 are tested)
 
 Please refer to the source code to install the required packages in both Julia and Python. You can install packages for Julia in shell as
 
@@ -26,7 +26,7 @@ git clone https://github.com/boathit/deepgtt
 cd deepgtt && mkdir -p data/h5path data/jldpath data/trainpath data/validpath data/testpath
 ```
 
-Download the dataset and put the extracted `*.h5` files into `deepgtt/data/h5path`.
+Download the dataset (**to be coming**) and put the extracted `*.h5` files into `deepgtt/data/h5path`.
 
 Each h5 file contains `n` trips of the day. For each trip, it has three fields `lon` (longitude), `lat` (latitude), `tms` (timestamp). You can read the h5 file using the [`readtripsh5`](https://github.com/boathit/deepgtt/blob/master/harbin/julia/Trip.jl#L28) function in Julia.
 
@@ -68,3 +68,16 @@ python train.py -trainpath ../data/trainpath -validpath ../data/validpath -kl_de
 ```bash
 python estimate.py -testpath ../data/testpath
 ```
+
+## Reference
+
+@inproceedings{www19xc,
+  author    = {Xiucheng Li and
+               Gao Cong and
+               Aixin Sun and
+               Yun Cheng},
+  title     = {Learning Travel Time Distributions with Deep Generative Model},
+  booktitle = {Proceedings of the 2019 World Wide Web Conference on World Wide Web,
+               {WWW} 2019, San Francisco, California, May 13-17, 2019},
+  year      = {2019},
+}
