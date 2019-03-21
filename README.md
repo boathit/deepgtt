@@ -26,7 +26,7 @@ git clone https://github.com/boathit/deepgtt
 cd deepgtt && mkdir -p data/h5path data/jldpath data/trainpath data/validpath data/testpath
 ```
 
-Download the dataset (**to be coming**) and put the extracted `*.h5` files into `deepgtt/data/h5path`.
+Download the [dataset](https://drive.google.com/open?id=1tdgarnn28CM01o9hbeKLUiJ1o1lskrqA) and put the extracted `*.h5` files into `deepgtt/data/h5path`.
 
 ### Data format
 
@@ -58,6 +58,8 @@ cd .. && mv data/trainpath/150106.h5 data/validpath && mv data/trainpath/150107.
 ```
 
 ## Training
+
+To run the python code, make sure you have set up the road network postgresql server by referring to the map server setup in [barefoot](https://github.com/boathit/barefoot). The road network server (see this [file](https://github.com/boathit/deepgtt/blob/master/harbin/python/db_utils.py#L8)) is used to provide road segment features for the model.
 
 ```bash
 cd deepgtt/harbin/python
