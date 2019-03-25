@@ -1,7 +1,7 @@
 
 # DeepGTT
 
-This repository holds the code used in our **WWW-19** paper: [Learning Travel Time Distributions with Deep Generative Model](https://drive.google.com/open?id=1oGYBeIlP_n5MtgyW9D8ExSoOiCRhgZoq).
+This repository holds the code used in our **WWW-19** paper: [Learning Travel Time Distributions with Deep Generative Model](http://www.ntu.edu.sg/home/lixiucheng/pdfs/www19-deepgtt.pdf).
 
 ## Requirements
 
